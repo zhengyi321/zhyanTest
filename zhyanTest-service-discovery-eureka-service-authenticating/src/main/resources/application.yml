@@ -1,0 +1,29 @@
+
+
+
+spring:
+  application:
+    name: zhyanTest-discovery-eureka-service3
+  security:
+    basic:
+      enabled: true
+    user:
+      name: user
+      password: 123
+server:
+  port: 8763
+eureka:
+  instance:
+    hostname: peer1
+  client:
+    service-url:
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
+    register-with-eureka: false
+    fetch-registry: false
+
+
+
+
+
+
+

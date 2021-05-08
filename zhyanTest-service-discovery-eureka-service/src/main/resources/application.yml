@@ -1,0 +1,19 @@
+
+eureka:
+  instance:
+    hostname: peer1
+  client:
+    service-url:
+      defaultZone: http://peer2:8762/eureka/,http://peer1:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+
+
+spring:
+  application:
+    name: zhyanTest-discovery-eureka-service1
+
+server:
+  port: 8761
+
+

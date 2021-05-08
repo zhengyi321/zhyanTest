@@ -1,0 +1,3 @@
+# Project exclude paths
+/zhyanTest-service-simple-consumer-movie/target/
+/zhyanTest-service-simple-provider-user/target/
