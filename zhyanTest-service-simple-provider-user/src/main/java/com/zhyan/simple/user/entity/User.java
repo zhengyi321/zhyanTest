@@ -1,5 +1,8 @@
 package com.zhyan.simple.user.entity;
 
+import org.bouncycastle.asn1.dvcs.Data;
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 
@@ -15,10 +18,14 @@ import java.math.BigDecimal;
  *
  *******/
 @Entity
+@Table(name = "tb_user")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+//    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GenericGenerator(name = "idGenerator", strategy = "uuid")
+    @GeneratedValue(generator = "idGenerator")
+//    private Long id;
+    private String  id;
     @Column
     private String username;
     @Column
@@ -28,13 +35,20 @@ public class User {
     @Column
     private BigDecimal balance;
 
-    public Long getId() {
+    public String getId() {
         return this.id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
+//    public Long getId() {
+//        return this.id;
+//    }
+//
+//    public void setId(Long id) {
+//        this.id = id;
+//    }
 
     public String getUsername() {
         return this.username;
