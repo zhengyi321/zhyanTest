@@ -7,15 +7,29 @@ spring:
   application:
     name: zhyanTest-provider-user
   datasource:
-    url: jdbc:mysql://localhost:3306/zhyanTest?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false
-    username: root
+    url: jdbc:oracle:thin:@192.168.1.112:1521:orcl?createDatabaseIfNotExist=true
+    username: c##root
     password: root
   jpa:
-    database: MySQL
-    database-platform: org.hibernate.dialect.MySQLDialect
+    database: Oracle
+    database-platform: org.hibernate.dialect.Oracle10gDialect
     show-sql: true
     hibernate:
       ddl-auto: update
+#
+#spring:
+#  application:
+#    name: zhyanTest-provider-user
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/zhyanTest?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false
+#    username: root
+#    password: root
+#  jpa:
+#    database: MySQL
+#    database-platform: org.hibernate.dialect.MySQLDialect
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: update
 
 
 
