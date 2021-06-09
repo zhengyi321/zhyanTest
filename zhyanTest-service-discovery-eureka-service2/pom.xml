@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.zhyan</groupId>
-    <artifactId>eurekaservice2</artifactId>
+    <artifactId>zhyanTest-service-discovery-eureka-service2</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>eurekaservice2</name>
     <description>Demo project for Spring Boot</description>

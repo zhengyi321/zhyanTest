@@ -6,28 +6,37 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="eurekaauthenticating" />
-        <module name="eurekaservice" />
-        <module name="eurekaservice2" />
         <module name="zhyanTest-service-discovery-eureka-service" />
-        <module name="zhyanTest-service-discovery-eureka-service-authenticating" />
+        <module name="zhyanTest-service-simple-consumer-movie-feign" />
+        <module name="zhyanTest-service-simple-consumer-movie-feign-manual" />
         <module name="zhyanTest-service-discovery-eureka-service2" />
-        <module name="zhyanTest-service-simple-consumer-movie" />
+        <module name="zhyanTest-service-simple-consumer-movie-ribbon" />
+        <module name="zhyanTest-service-simple-consumer-movie-feign-hystrix-fallback" />
         <module name="zhyanTest-service-simple-provider-user" />
+        <module name="zhyanTest-service-simple-provider-user-with-auth" />
+        <module name="zhyanTest-service-simple-consumer-movie" />
+        <module name="zhyanTest-service-simple-consumer-movie-ribbon-hystrix" />
+        <module name="zhyanTest-service-discovery-eureka-service-authenticating" />
+        <module name="zhyanTest-service-simple-provider-user2" />
+        <module name="zhyanTest-service-simple-consumer-movie-without-eureka" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="wrapper (1)" target="1.5" />
+      <module name="wrapper (2)" target="1.5" />
       <module name="zhyanTest-service-discovery-eureka" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="eurekaauthenticating" options="-parameters" />
-      <module name="eurekaservice" options="-parameters" />
-      <module name="eurekaservice2" options="-parameters" />
       <module name="zhyanTest-service-discovery-eureka-service" options="-parameters" />
       <module name="zhyanTest-service-discovery-eureka-service-authenticating" options="-parameters" />
       <module name="zhyanTest-service-discovery-eureka-service2" options="-parameters" />
+      <module name="zhyanTest-service-simple-consumer-movie-feign-hystrix-fallback" options="" />
+      <module name="zhyanTest-service-simple-consumer-movie-ribbon" options="-parameters" />
+      <module name="zhyanTest-service-simple-consumer-movie-ribbon-hystrix" options="-parameters" />
+      <module name="zhyanTest-service-simple-consumer-movie-without-eureka" options="" />
+      <module name="zhyanTest-service-simple-provider-user2" options="" />
     </option>
   </component>
 </project>

@@ -1,0 +1,16 @@
+server:
+  port: 8010
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+      instance:
+        prefer-ip-address: true
+spring:
+  application:
+    name: zhyanTest-consumer-movie
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  # * 在yaml 文件属于关键字，所以需要加引号

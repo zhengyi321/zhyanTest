@@ -10,8 +10,19 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>zhyanTest-service-simple-provider-user</module>
+        <module>zhyanTest-service-simple-provider-user2</module>
+        <module>zhyanTest-service-simple-provider-user-with-auth</module>
         <module>zhyanTest-service-simple-consumer-movie</module>
-        <module>zhyanTest-service-discovery-eureka</module>
+        <module>zhyanTest-service-simple-consumer-movie-feign</module>
+        <module>zhyanTest-service-simple-consumer-movie-feign-hystrix-fallback</module>
+        <module>zhyanTest-service-simple-consumer-movie-feign-manual</module>
+        <module>zhyanTest-service-simple-consumer-movie-ribbon</module>
+        <module>zhyanTest-service-simple-consumer-movie-ribbon-hystrix</module>
+
+        <module>zhyanTest-service-simple-consumer-movie-without-eureka</module>
+        <module>zhyanTest-service-discovery-eureka-service</module>
+        <module>zhyanTest-service-discovery-eureka-service2</module>
+        <module>zhyanTest-service-discovery-eureka-service-authenticating</module>
     </modules>
 
     <properties>

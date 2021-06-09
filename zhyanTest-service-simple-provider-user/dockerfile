@@ -1,0 +1,7 @@
+FROM java:8
+# VOLUME /tmp
+COPY target/zhyanTest-service-simple-provider-user-1.5.9.RELEASE.jar  user.jar
+RUN bash -c 'touch /user.jar'
+EXPOSE 8000
+ENTRYPOINT ["java", "-Dfile.encoding=utf-8","-jar", "/user.jar"]
+

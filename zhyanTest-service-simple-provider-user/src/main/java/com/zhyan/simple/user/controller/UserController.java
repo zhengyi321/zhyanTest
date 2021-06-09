@@ -5,7 +5,6 @@ import com.zhyan.simple.user.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /*******
@@ -25,7 +24,7 @@ public class UserController {
     private UserRepository userRepository;
 
     @GetMapping("/{id}")
-    public User findByIf(@PathVariable Long id){
+    public User findById(@PathVariable String id){
         User user = userRepository.findOne(id);
 //        User user = new User();
 //        user.setAge(11);
@@ -33,12 +32,14 @@ public class UserController {
 //        user.setId(1L);
         return user;
     }
+
     @GetMapping("/save")
     public User saveUser() {
         User user = new User();
         user.setAge(11);
         user.setUsername("zz");
+        userRepository.save(user);
 //        user.setId(1L);
-        return userRepository.save(user);
+        return user;
     }
 }

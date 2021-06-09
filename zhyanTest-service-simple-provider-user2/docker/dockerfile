@@ -1,0 +1,3 @@
+FROM java
+ADD /auth-user-server-1.0.jar //
+ENTRYPOINT ["java", "-Dfile.encoding=utf-8","-jar", "/auth-user-server-1.0.jar"]

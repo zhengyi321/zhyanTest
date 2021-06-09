@@ -1,0 +1,45 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: zhyanTest-provider-user
+  datasource:
+    url: jdbc:oracle:thin:@192.168.35.151:1521:orcl?createDatabaseIfNotExist=true
+    username: c##root
+    password: root
+  jpa:
+    database: Oracle
+    database-platform: org.hibernate.dialect.Oracle10gDialect
+    show-sql: true
+
+    hibernate:
+      ddl-auto: update
+
+#
+#spring:
+#  application:
+#    name: zhyanTest-provider-user
+#  datasource:
+#    url: jdbc:mysql://192.168.35.151:8066/TESTDB?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false&serverTimezone=UTC
+#    username: root
+#    password: 123456
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#  jpa:
+#    database: MySQL
+#    database-platform: org.hibernate.dialect.MySQLDialect
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: update
+logging:                                # 配置日志级别，让hibernate打印出执行的SQL
+  level:
+    root: INFO
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+      instance:
+        prefer-ip-address: true
